@@ -39,7 +39,7 @@ export default class Person implements IPerson {
 }
 
 export const getAge = (birthdate: Date): number => { // birthday is a date
-    var ageDifMs = sub(Date.now(), birthdate.getTime());
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    const ageDifMs = sub(Date.now(), birthdate.getTime());
+    const ageDate = new Date(ageDifMs); // miliseconds from epoch
     return Math.abs(sub(ageDate.getUTCFullYear(), 1970));
 }
